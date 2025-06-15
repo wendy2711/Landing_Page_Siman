@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+    background-color:#A83338;
+}
+
+.navbar ul {
+    
+    display: flex;
+    list-style: none;
+    padding: 1.5rem;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    
+}
+
+.navbar ul li:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+.imagen2 {
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.imagen2:hover {
+  transform: scale(1.1);
+}
+
+.div1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.div2 {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.imagen3 {
+    border-radius: 20px;
+}
+
+.gallery {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5rem 2rem 5rem;
+}
+
+.card {
+  text-align: center;
+  max-width: 200px;
+}
+
+.circle-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #ccc; /* opcional */
+  transition: transform 0.3s ease; /* suave al hacer zoom */
+
+}
+
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-img:hover {
+  transform: scale(1.1);
+}
+
+.card p {
+ font-family: "Roboto Slab", serif;
+}
+
+footer {
+    background-color: black;
+    color: #FFF;
+    
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul {
+    list-style: none;
+   text-align: center;
+    gap: 1rem;
+    
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1rem;
+   margin-top: 1rem;
+}
+
+
+
+.product-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card .description {
+  font-size: 0.95rem;
+  padding: 0.5rem;
+  color: #444;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-card .price {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #A83338;
+  padding-bottom: 1rem;
+}
+
+
+.products-grid {
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .products-grid {
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .product-card {
+    width: 220px;
+  }
+
+  .div1,
+  .div2 {
+    padding: 1rem;
+  }
+
+  .imagen2,
+  .imagen3 {
+    width: 90%;
+    height: auto;
+  }
+
+  .gallery {
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 180px;
+  }
+
+  .circle-img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .navbar ul li {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .products-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .imagen2,
+  .imagen3 {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer ul {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .circle-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .product-card .description {
+    font-size: 0.9rem;
+  }
+
+  .product-card .price {
+    font-size: 1rem;
+  }
+
+  .navbar ul {
+    font-size: 0.9rem;
+  }
+}
